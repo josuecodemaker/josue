@@ -87,16 +87,20 @@ a {
     height: 2.5rem;            /* Footer height */
 }
 
-div.container5 {
+.rodapemobile {
+  font-size: 90%;
+}
+
+.container5 {
     font-weight: bold;
     font-size: 600%;
     text-align: center;
     align-items: center;
 }
 
-div.container5 p {
+.container5 p {
     margin-top: 0;
-}  
+}
 
 .ponteiro {
     cursor: pointer;
