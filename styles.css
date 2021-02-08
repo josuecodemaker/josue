@@ -1,5 +1,6 @@
+
+
 h1 {
-    margin-top: 200px;
     text-align: center;
     font-size: 500%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -7,17 +8,28 @@ h1 {
     text-shadow: 2px 1px 10px rgb(69, 69, 69);
 }
 
-h1 span {
+p span {
     background-color: black;
 }
 
 p {
-    text-align: center;
     text-shadow: 20cm black;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
     text-shadow: 1px 1px 15px black;
 }
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .child {
+    display: inline-block;
+  }  
+
+html, body {margin: 0; height: 100%; overflow: hidden}
 
 body {
     background-image: linear-gradient(to right, #ce565a, #723aa3);
@@ -35,26 +47,120 @@ a {
 }
 
 #botao {
+    display:inline;
+    height: fit-content;
+    width: fit-content;    
     text-decoration: none;
 }
 
+#vertical-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+#content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+    display: flex;
+}
+
+#headidentation {
+    font-size: 500%;
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    text-shadow: 2px 1px 10px rgb(69, 69, 69);
+}
+
 #rodape {
+    position: absolute;
     text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
 }
 
 div.container5 {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    height: 5em;
     font-weight: bold;
-    font-size: 250%;
+    font-size: 600%;
+    text-align: center;
     align-items: center;
 }
 
 div.container5 p {
-    margin: 0;
+    margin-top: 0;
 }  
 
 .ponteiro {
     cursor: pointer;
 }
+
+.nobr { white-space: nowrap }
+
+@keyframes color-change {
+    0% { color: white; }
+    20% {color: rgb(240, 240, 81); }
+    40% { color: rgb(236, 75, 75); }
+    60% { color: rgb(184, 198, 216); }
+    80% { color: rgb(70, 142, 250); }
+    100% { color: white; }
+}
+
+.fade-in {
+    animation: fadeIn ease 1s;
+    -webkit-animation: fadeIn ease 1s;
+    -moz-animation: fadeIn ease 1s;
+    -o-animation: fadeIn ease 1s;
+    -ms-animation: fadeIn ease 1s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+  }
+  
