@@ -14,7 +14,5 @@ div.container5 {
     height: 10em;
     display: flex;
     align-items: center;
-}
-div.container5 p {
     margin: 0;
 }  
