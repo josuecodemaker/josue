@@ -2,17 +2,91 @@
 <html>
     <head>
         <title>O Josué Santana já transou hoje?</title>
+        <link rel="shortcut icon" href="./favicon.png">              
         <link rel="stylesheet" href="./styles.css"/> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
-        <h1>Josué Santana já transou hoje???????</h1>
+        <div class = "container"></div>
+        <div type = "button" id = "botao" onclick = "changebackground()">
+            <h1><span id="demo" class="ponteiro">‏‏‎‎</span> já transou hoje?</h1>
+        </div>
         <div class = "container5">
             <p id = "sexo">Não!</p>
         </div>
+
         <script>
             if(new Date().getHours() > 19) {
-                document.getElementById("sexo").innerHTML = "Sim!";
+                var now = new Date();
+                var start = new Date(now.getFullYear(), 0, 0);
+                var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+                var oneDay = 1000 * 60 * 60 * 24;
+                var day = Math.floor(diff / oneDay);
+                document.getElementById("sexo").innerHTML = "Sim!<br>" + day + "/366";
+            }
+
+            var i = 0;
+            var txt = ' Josué Santana ‎'; /* The text */
+            var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+            function typeWriter() {
+                if (i < txt.length) {
+                    document.getElementById("demo").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            typeWriter();
+
+            var k = 0;
+            var preload = ['banjo.png', 'drip.png', 'fundo.png', 'light.png', 'snk.png', 'tokyo.png', 'crash.png', 'udyr.png']
+            var images = [];
+            for (n = 0; n < preload.length; n++) {
+                images[n] = new Image();
+                images[n].src = preload[n];
+            }
+ 
+            function changebackground() {
+                document.getElementById("botao").onclick = null;
+                switch(k) {
+                    case 0:
+                        document.body.style.background = "url('./fundo.png') no-repeat right top";
+                        break;
+                    case 1:
+                        document.body.style.background = "url('./drip.png') no-repeat right top";
+                        break;
+                    case 2:
+                        document.body.style.background = "url('./banjo.png') no-repeat right top";
+                        break;
+                    case 3:
+                        document.body.style.background = "url('./light.png') no-repeat right top";
+                        break;
+                    case 4:
+                        document.body.style.background = "url('./snk.png') no-repeat right top";
+                        break;
+                    case 5:
+                        document.body.style.background = "url('./tokyo.png') no-repeat right top";
+                        break;
+                    case 6:
+                        document.body.style.background = "url('./udyr.png') no-repeat right top";
+                        break;
+                    case 7:
+                        document.body.style.background = "url('./crash.png') no-repeat right top";
+                        k = -1;
+                        break;
+                }
+                k++;
+                setTimeout(changebackground, 1800);
             }
         </script>
+        
+        <footer id="rodape">
+            <span><a href="https://pt-br.facebook.com/crocodilodointerior/?ref=page_internal">Crocodilo do Interior</a></span>
+            <a> @ </a>
+            <a href="https://www.twitch.tv/cdilol">Twitch</a>
+            <a> | </a>
+            <a href="https://www.youtube.com/channel/UCFG6J55F__uzmaeBOh3kgoA?sub_confirmation=1">Inscreva-se 😡</a>
+        </footer>
     </body>
 </html>
