@@ -62,7 +62,7 @@
                             images[n].src = preload[n];
                         }
             
-                        if(new Date().getHours() > 18) {
+                        if(new Date().getHours() > 20) {
                             var now = new Date();
                             var start = new Date(now.getFullYear(), 0, 0);
                             var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
@@ -94,7 +94,7 @@
                         typeWriter();
              
                         function playDrip() {
-                            if(new Date().getHours() > 18) {
+                            if(new Date().getHours() > 20) {
                                 document.getElementById("sexo").style.animation = "color-change 0.2s infinite";
                                 var audio = new Audio('drip.mp3');
                                 audio.play();
