@@ -14,7 +14,7 @@
             <div id="content-wrap">
                 <div id="vertical-center">
                     <div class="parent">
-                        <div class = "child" type = "button" id = "botao" onclick = "changebackground(); playBirthday Sex()">
+                        <div class = "child" type = "button" id = "botao" onclick = "changebackground(); playBirthday_Sex()">
                             <p id="headidentation">
                                 <span id="josue" class="ponteiro">
                                     <!--Nome do Josué-->
@@ -93,10 +93,10 @@
             
                         typeWriter();
              
-                        function playBirthday Sex() {
+                        function playBirthday_Sex() {
                             if(new Date().getHours() > 20) {
                                 document.getElementById("sexo").style.animation = "color-change 0.2s infinite";
-                                var audio = new Audio('Birthday Sex.mp3');
+                                var audio = new Audio('Birthday_Sex.mp3');
                                 audio.play();
                             }
                         }
